@@ -1,0 +1,273 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="gqV-Ej-MEh">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Day Finder-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="DayFinderViewController" customModule="Converter" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Day Finder" id="4vJ-s3-5dl">
+                        <barButtonItem key="leftBarButtonItem" image="moon.circle.fill" catalog="system" id="ZEe-KW-YIt">
+                            <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <connections>
+                                <segue destination="zHO-M4-ri6" kind="presentation" identifier="dayMode" id="0Rk-AH-vrD"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" image="info.circle.fill" catalog="system" id="u1X-td-0jP">
+                            <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <connections>
+                                <segue destination="Qji-Tv-i0Q" kind="presentation" identifier="dayInfo" id="xn3-21-wbf"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1957.9710144927537" y="78.348214285714278"/>
+        </scene>
+        <!--Appearance View Controller-->
+        <scene sceneID="cyv-uA-F1A">
+            <objects>
+                <viewController id="zHO-M4-ri6" customClass="AppearanceViewController" customModule="Converter" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="eDg-P7-OpN">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="g5K-zw-XGh"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="Z9T-Eq-ol3"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="slB-go-PJW" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2794" y="78"/>
+        </scene>
+        <!--Temperature-->
+        <scene sceneID="fwk-YV-oPQ">
+            <objects>
+                <viewController id="T17-Os-XdL" customClass="TempViewController" customModule="Converter" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="pMX-BV-8sm">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="day" translatesAutoresizingMaskIntoConstraints="NO" id="qun-PM-LAw">
+                                <rect key="frame" x="0.0" y="140" width="414" height="624"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="32 ° F" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iFU-u8-Rez">
+                                <rect key="frame" x="45" y="410" width="325" height="61"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="61" id="8Jm-K1-4Gg"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="325" id="fHB-Mx-OdQ"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="MarkerFelt-Thin" family="Marker Felt" pointSize="20"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="1" minValue="-100" maxValue="100" minimumValueImage="thermometer.snowflake" catalog="system" maximumValueImage="thermometer.sun.fill" translatesAutoresizingMaskIntoConstraints="NO" id="aWm-4C-wJK">
+                                <rect key="frame" x="43" y="341" width="329" height="30"/>
+                                <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="325" id="HNO-dM-W0G"/>
+                                    <constraint firstAttribute="height" constant="29" id="eCJ-wc-iUg"/>
+                                </constraints>
+                                <color key="minimumTrackTintColor" systemColor="systemIndigoColor"/>
+                                <color key="maximumTrackTintColor" systemColor="systemPinkColor"/>
+                                <color key="thumbTintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <connections>
+                                    <action selector="tempSliderChanged:forEvent:" destination="T17-Os-XdL" eventType="valueChanged" id="xzw-Vu-dF3"/>
+                                </connections>
+                            </slider>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Select SegmentControl to convert Temperature!" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="V7W-kr-syN">
+                                <rect key="frame" x="45" y="511" width="324" height="101"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="324" id="QIE-Fl-gxP"/>
+                                    <constraint firstAttribute="height" constant="101" id="bfw-6z-jWC"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="MarkerFelt-Thin" family="Marker Felt" pointSize="20"/>
+                                <color key="textColor" red="0.96493343779999996" green="1" blue="0.98038866089999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="rdV-eT-Dwn">
+                                <rect key="frame" x="45" y="622" width="324" height="32"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="324" id="RyY-FE-0ec"/>
+                                    <constraint firstAttribute="height" constant="31" id="ULn-vR-Pye"/>
+                                </constraints>
+                                <segments>
+                                    <segment title="Fahrenheit"/>
+                                    <segment title="Kelvin"/>
+                                </segments>
+                                <connections>
+                                    <action selector="tempSegmentControlChanged:" destination="T17-Os-XdL" eventType="valueChanged" id="aJt-aG-YG3"/>
+                                </connections>
+                            </segmentedControl>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0 ° C" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hGq-dI-TVJ">
+                                <rect key="frame" x="45" y="206" width="324" height="61"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="61" id="1Zr-x9-GBI"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="324" id="eNv-ar-Ss0"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="MarkerFelt-Thin" family="Marker Felt" pointSize="20"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="yJm-e2-ZOQ"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="iFU-u8-Rez" firstAttribute="top" secondItem="aWm-4C-wJK" secondAttribute="bottom" constant="40" id="103-Xf-20W"/>
+                            <constraint firstItem="yJm-e2-ZOQ" firstAttribute="trailing" secondItem="iFU-u8-Rez" secondAttribute="trailing" constant="44" id="5Wn-Vm-V1J"/>
+                            <constraint firstItem="aWm-4C-wJK" firstAttribute="top" secondItem="hGq-dI-TVJ" secondAttribute="bottom" constant="74" id="5ca-c4-26x"/>
+                            <constraint firstItem="hGq-dI-TVJ" firstAttribute="top" secondItem="yJm-e2-ZOQ" secondAttribute="top" constant="66" id="90L-Ya-XOx"/>
+                            <constraint firstItem="qun-PM-LAw" firstAttribute="trailing" secondItem="yJm-e2-ZOQ" secondAttribute="trailing" id="C9d-Ja-6fu"/>
+                            <constraint firstItem="yJm-e2-ZOQ" firstAttribute="trailing" secondItem="rdV-eT-Dwn" secondAttribute="trailing" constant="45" id="JTv-PV-aeK"/>
+                            <constraint firstItem="yJm-e2-ZOQ" firstAttribute="trailing" secondItem="V7W-kr-syN" secondAttribute="trailing" constant="45" id="OD3-OA-tIT"/>
+                            <constraint firstItem="hGq-dI-TVJ" firstAttribute="centerX" secondItem="qun-PM-LAw" secondAttribute="centerX" id="OvV-KD-bbm"/>
+                            <constraint firstItem="V7W-kr-syN" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="rdV-eT-Dwn" secondAttribute="leading" id="Wvd-eh-84x"/>
+                            <constraint firstItem="qun-PM-LAw" firstAttribute="top" secondItem="yJm-e2-ZOQ" secondAttribute="top" id="Xfa-52-M6h"/>
+                            <constraint firstItem="qun-PM-LAw" firstAttribute="bottom" secondItem="yJm-e2-ZOQ" secondAttribute="bottom" id="cyM-ld-bgB"/>
+                            <constraint firstItem="rdV-eT-Dwn" firstAttribute="top" secondItem="V7W-kr-syN" secondAttribute="bottom" constant="10" id="dkt-8e-imS"/>
+                            <constraint firstItem="iFU-u8-Rez" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="V7W-kr-syN" secondAttribute="leading" id="gQk-Lc-gy4"/>
+                            <constraint firstItem="qun-PM-LAw" firstAttribute="leading" secondItem="yJm-e2-ZOQ" secondAttribute="leading" id="l8o-lC-xyW"/>
+                            <constraint firstItem="V7W-kr-syN" firstAttribute="top" secondItem="iFU-u8-Rez" secondAttribute="bottom" constant="40" id="mty-yu-BGD"/>
+                            <constraint firstItem="aWm-4C-wJK" firstAttribute="leading" secondItem="iFU-u8-Rez" secondAttribute="leading" id="pJC-yc-yS2"/>
+                            <constraint firstItem="hGq-dI-TVJ" firstAttribute="leading" secondItem="aWm-4C-wJK" secondAttribute="leading" id="wVk-dL-wwx"/>
+                        </constraints>
+                    </view>
+                    <toolbarItems/>
+                    <navigationItem key="navigationItem" title="Temperature" id="ohA-U5-iqA">
+                        <barButtonItem key="leftBarButtonItem" image="moon.circle.fill" catalog="system" id="hVm-hW-Ff6">
+                            <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <connections>
+                                <segue destination="zHO-M4-ri6" kind="presentation" identifier="tempMode" id="3vS-Sg-huv"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" image="info.circle.fill" catalog="system" id="p4O-0X-de8">
+                            <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <connections>
+                                <segue destination="Qji-Tv-i0Q" kind="presentation" identifier="tempInfo" id="JKG-Ng-oeF"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="celsiusLabel" destination="hGq-dI-TVJ" id="QSc-na-G8w"/>
+                        <outlet property="convertedTempLabel" destination="iFU-u8-Rez" id="dDF-V2-0UA"/>
+                        <outlet property="tempSegmentControl" destination="rdV-eT-Dwn" id="awp-WW-t9N"/>
+                        <outlet property="tempSlider" destination="aWm-4C-wJK" id="ANu-HZ-Y2N"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="zu3-4t-bnZ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1957.9710144927537" y="764.73214285714278"/>
+        </scene>
+        <!--Day Finder-->
+        <scene sceneID="WlI-gX-Wmg">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="4tO-RX-a63" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Day Finder" image="calendar.circle.fill" catalog="system" id="ziA-Jn-ipz"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" largeTitles="YES" id="cOa-kR-1Sd">
+                        <rect key="frame" x="0.0" y="44" width="414" height="96"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="rN6-Pu-sCq"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="tdC-zp-KNf" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1047.8260869565217" y="78.348214285714278"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="lbl-ur-XHg">
+            <objects>
+                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="gqV-Ej-MEh" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="IRE-nR-7yD">
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" systemColor="secondaryLabelColor"/>
+                        <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="selectedImageTintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="4tO-RX-a63" kind="relationship" relationship="viewControllers" id="Qhc-OV-3X3"/>
+                        <segue destination="COx-ni-AuD" kind="relationship" relationship="viewControllers" id="DVe-XX-AWv"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="t7y-3G-3Ug" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-19" y="365"/>
+        </scene>
+        <!--Temperature-->
+        <scene sceneID="LG5-VH-yd6">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="COx-ni-AuD" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Temperature" image="thermometer.sun.fill" catalog="system" id="POu-Id-u5r"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" largeTitles="YES" id="4iZ-O0-vrd">
+                        <rect key="frame" x="0.0" y="44" width="414" height="96"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="T17-Os-XdL" kind="relationship" relationship="rootViewController" id="u6F-1x-2j8"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="fli-yN-R6Y" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1025" y="765"/>
+        </scene>
+        <!--App Info View Controller-->
+        <scene sceneID="mhV-nc-E4e">
+            <objects>
+                <viewController id="Qji-Tv-i0Q" customClass="AppInfoViewController" customModule="Converter" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="zdV-av-YxM">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="RSg-qE-nml"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="lUk-Xs-3Ke" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2796" y="765"/>
+        </scene>
+    </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="xn3-21-wbf"/>
+        <segue reference="3vS-Sg-huv"/>
+    </inferredMetricsTieBreakers>
+    <resources>
+        <image name="calendar.circle.fill" catalog="system" width="128" height="121"/>
+        <image name="day" width="658" height="1432"/>
+        <image name="info.circle.fill" catalog="system" width="128" height="121"/>
+        <image name="moon.circle.fill" catalog="system" width="128" height="121"/>
+        <image name="thermometer.snowflake" catalog="system" width="119" height="128"/>
+        <image name="thermometer.sun.fill" catalog="system" width="114" height="128"/>
+        <systemColor name="secondaryLabelColor">
+            <color red="0.23529411764705882" green="0.23529411764705882" blue="0.2627450980392157" alpha="0.59999999999999998" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemIndigoColor">
+            <color red="0.34509803921568627" green="0.33725490196078434" blue="0.83921568627450982" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemPinkColor">
+            <color red="1" green="0.17647058823529413" blue="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>
