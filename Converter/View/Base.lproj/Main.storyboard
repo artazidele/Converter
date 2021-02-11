@@ -28,7 +28,7 @@
                         <barButtonItem key="rightBarButtonItem" image="info.circle.fill" catalog="system" id="u1X-td-0jP">
                             <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <connections>
-                                <segue destination="Qji-Tv-i0Q" kind="presentation" identifier="dayInfo" id="xn3-21-wbf"/>
+                                <segue destination="Qji-Tv-i0Q" kind="presentation" identifier="dayInfo" id="Lgm-FN-G1M"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -44,14 +44,67 @@
                     <view key="view" contentMode="scaleToFill" id="eDg-P7-OpN">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5Wb-lJ-mjZ">
+                                <rect key="frame" x="107" y="382" width="200" height="78"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="200" id="1Zk-Jn-xSW"/>
+                                    <constraint firstAttribute="height" constant="78" id="wrF-mS-AoB"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="MarkerFelt-Thin" family="Marker Felt" pointSize="25"/>
+                                <state key="normal" title="Open Settings">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <color key="titleShadowColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="openSettingsButtonTapped:" destination="zHO-M4-ri6" eventType="touchUpInside" id="VId-OY-tna"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Text" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3hP-9d-uNj">
+                                <rect key="frame" x="107" y="194" width="200" height="160"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="160" id="K9y-Sd-m7g"/>
+                                    <constraint firstAttribute="width" constant="200" id="W4n-bQ-WbY"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="MarkerFelt-Thin" family="Marker Felt" pointSize="24"/>
+                                <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="54s-QU-GeC">
+                                <rect key="frame" x="333" y="20" width="61" height="53"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="MarkerFelt-Wide" family="Marker Felt" pointSize="24"/>
+                                <state key="normal" title="X">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="closeButtonTapped:" destination="zHO-M4-ri6" eventType="touchUpInside" id="SDe-Dy-Rpg"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="g5K-zw-XGh"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="g5K-zw-XGh" firstAttribute="bottom" secondItem="5Wb-lJ-mjZ" secondAttribute="bottom" constant="299" id="2TO-0x-Yep"/>
+                            <constraint firstItem="5Wb-lJ-mjZ" firstAttribute="top" secondItem="3hP-9d-uNj" secondAttribute="bottom" constant="28" id="QXA-M9-s6T"/>
+                            <constraint firstItem="g5K-zw-XGh" firstAttribute="trailing" secondItem="3hP-9d-uNj" secondAttribute="trailing" constant="107" id="b7s-sp-Ncb"/>
+                            <constraint firstItem="3hP-9d-uNj" firstAttribute="top" secondItem="g5K-zw-XGh" secondAttribute="top" constant="194" id="eNO-HP-Ovx"/>
+                            <constraint firstItem="3hP-9d-uNj" firstAttribute="leading" secondItem="g5K-zw-XGh" secondAttribute="leading" constant="107" id="gCB-hI-fWD"/>
+                            <constraint firstItem="g5K-zw-XGh" firstAttribute="trailing" secondItem="5Wb-lJ-mjZ" secondAttribute="trailing" constant="107" id="jyz-lq-tGO"/>
+                            <constraint firstItem="5Wb-lJ-mjZ" firstAttribute="leading" secondItem="g5K-zw-XGh" secondAttribute="leading" constant="107" id="xb7-cM-7RZ"/>
+                        </constraints>
                     </view>
+                    <toolbarItems/>
                     <navigationItem key="navigationItem" id="Z9T-Eq-ol3"/>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="buttonText" destination="5Wb-lJ-mjZ" id="YUp-xk-N4T"/>
+                        <outlet property="textLabel" destination="3hP-9d-uNj" id="r1w-Gv-EnU"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="slB-go-PJW" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2794" y="78"/>
+            <point key="canvasLocation" x="2792.753623188406" y="77.678571428571431"/>
         </scene>
         <!--Temperature-->
         <scene sceneID="fwk-YV-oPQ">
@@ -237,17 +290,49 @@
                     <view key="view" contentMode="scaleToFill" id="zdV-av-YxM">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4Qj-Mj-7LJ">
+                                <rect key="frame" x="333" y="20" width="61" height="53"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="MarkerFelt-Wide" family="Marker Felt" pointSize="24"/>
+                                <state key="normal" title="X">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="closeButtonTapped:" destination="Qji-Tv-i0Q" eventType="touchUpInside" id="OOW-GI-80J"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Text" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cfO-Nb-UAP">
+                                <rect key="frame" x="107" y="243" width="200" height="154"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="154" id="JCW-qa-Gdb"/>
+                                    <constraint firstAttribute="width" constant="200" id="mWH-OC-fuI"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="MarkerFelt-Thin" family="Marker Felt" pointSize="24"/>
+                                <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="RSg-qE-nml"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="RSg-qE-nml" firstAttribute="trailing" secondItem="cfO-Nb-UAP" secondAttribute="trailing" constant="107" id="6RU-aR-BkT"/>
+                            <constraint firstItem="RSg-qE-nml" firstAttribute="bottom" secondItem="cfO-Nb-UAP" secondAttribute="bottom" constant="411" id="92a-Y7-0aQ"/>
+                            <constraint firstItem="cfO-Nb-UAP" firstAttribute="leading" secondItem="RSg-qE-nml" secondAttribute="leading" constant="107" id="Jsx-1v-4YJ"/>
+                            <constraint firstItem="cfO-Nb-UAP" firstAttribute="top" secondItem="RSg-qE-nml" secondAttribute="top" constant="243" id="bSs-jm-dsE"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="textLabel" destination="cfO-Nb-UAP" id="f2W-rn-5Id"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="lUk-Xs-3Ke" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2796" y="765"/>
+            <point key="canvasLocation" x="2795.6521739130435" y="764.73214285714278"/>
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="xn3-21-wbf"/>
+        <segue reference="Lgm-FN-G1M"/>
         <segue reference="3vS-Sg-huv"/>
     </inferredMetricsTieBreakers>
     <resources>

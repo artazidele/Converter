@@ -54,7 +54,20 @@ class TempViewController: UIViewController {
     //MARK: - Navigation
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        //
+        if segue.identifier == "dayInfo" {
+            // Get the new view controller using segue.destination.
+            let vc = segue.destination as! AppInfoViewController
+            // Pass the selected object to the new view controller.
+            vc.infoText = "Day Finder helps to find exact weekday for given date."
+        } else if segue.identifier == "tempInfo" {
+            // Get the new view controller using segue.destination.
+            let vc = segue.destination as! AppInfoViewController
+            // Pass the selected object to the new view controller.
+            vc.infoText = "Converter  helps to convert Temperature."
+        }
+        
     }
+        
+    
     
 }
