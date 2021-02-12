@@ -15,8 +15,118 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="day" translatesAutoresizingMaskIntoConstraints="NO" id="Jyi-Uw-8JI">
+                                <rect key="frame" x="0.0" y="172" width="414" height="673"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="14" translatesAutoresizingMaskIntoConstraints="NO" id="9fh-fJ-yfL">
+                                <rect key="frame" x="70" y="220" width="274" height="130"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="19" translatesAutoresizingMaskIntoConstraints="NO" id="Z2F-xl-0HP">
+                                        <rect key="frame" x="0.0" y="0.0" width="274" height="34"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text=" Date:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="99l-fx-Wcc">
+                                                <rect key="frame" x="0.0" y="0.0" width="74" height="34"/>
+                                                <fontDescription key="fontDescription" name="MarkerFelt-Thin" family="Marker Felt" pointSize="20"/>
+                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="fac-Ap-v4O">
+                                                <rect key="frame" x="93" y="0.0" width="181" height="34"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="34" id="1OD-dc-ZW4"/>
+                                                    <constraint firstAttribute="width" constant="181" id="nMJ-p1-qaE"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits"/>
+                                            </textField>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="19" translatesAutoresizingMaskIntoConstraints="NO" id="GiS-af-2m7">
+                                        <rect key="frame" x="0.0" y="48" width="274" height="34"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text=" Month:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="v9T-Vi-ZnH">
+                                                <rect key="frame" x="0.0" y="0.0" width="74" height="34"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="34" id="MLa-w9-x3G"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" name="MarkerFelt-Thin" family="Marker Felt" pointSize="20"/>
+                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Qqh-z0-pQF">
+                                                <rect key="frame" x="93" y="0.0" width="181" height="34"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="34" id="gHM-QF-z3N"/>
+                                                    <constraint firstAttribute="width" constant="181" id="yOR-6f-6dC"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits"/>
+                                            </textField>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="19" translatesAutoresizingMaskIntoConstraints="NO" id="Y70-Vj-1l4">
+                                        <rect key="frame" x="0.0" y="96" width="274" height="34"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text=" Year:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="30P-aF-N7C">
+                                                <rect key="frame" x="0.0" y="0.0" width="47.5" height="34"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="34" id="Bfp-p5-MPv"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" name="MarkerFelt-Thin" family="Marker Felt" pointSize="20"/>
+                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="g8u-PR-AEe">
+                                                <rect key="frame" x="66.5" y="0.0" width="207.5" height="34"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits"/>
+                                            </textField>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                            </stackView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Write a date and press the button!" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hFL-IN-qnW">
+                                <rect key="frame" x="70" y="408" width="268" height="139"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="268" id="5RY-86-lJl"/>
+                                    <constraint firstAttribute="height" constant="139" id="HxY-nR-3Qu"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="MarkerFelt-Thin" family="Marker Felt" pointSize="24"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WXP-SX-Zcc">
+                                <rect key="frame" x="106" y="602" width="197.5" height="73"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="197.5" id="8Gf-DE-3ZO"/>
+                                    <constraint firstAttribute="height" constant="73" id="w8x-DX-ogh"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="MarkerFelt-Thin" family="Marker Felt" pointSize="30"/>
+                                <state key="normal" title="Find">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="findWeekDayTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="VXp-Af-sNC"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="9fh-fJ-yfL" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="70" id="3Ac-z9-hDU"/>
+                            <constraint firstItem="WXP-SX-Zcc" firstAttribute="top" secondItem="hFL-IN-qnW" secondAttribute="bottom" constant="55" id="6PM-iu-FUb"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="9fh-fJ-yfL" secondAttribute="trailing" constant="70" id="Lwi-lU-BFD"/>
+                            <constraint firstItem="WXP-SX-Zcc" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="106" id="MMH-iE-gd6"/>
+                            <constraint firstItem="9fh-fJ-yfL" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="80" id="N4R-HU-pd9"/>
+                            <constraint firstItem="hFL-IN-qnW" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="70" id="b8d-82-AsE"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="WXP-SX-Zcc" secondAttribute="trailing" constant="110.5" id="iQw-eQ-wei"/>
+                            <constraint firstItem="hFL-IN-qnW" firstAttribute="top" secondItem="9fh-fJ-yfL" secondAttribute="bottom" constant="58" id="lkw-iQ-Rbm"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="hFL-IN-qnW" secondAttribute="trailing" constant="76" id="rXr-Op-A3W"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="WXP-SX-Zcc" secondAttribute="bottom" constant="138" id="xwY-fZ-3Sn"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Day Finder" id="4vJ-s3-5dl">
                         <barButtonItem key="leftBarButtonItem" image="moon.circle.fill" catalog="system" id="ZEe-KW-YIt">
@@ -32,6 +142,13 @@
                             </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="dayTextField" destination="fac-Ap-v4O" id="2KL-tL-vqE"/>
+                        <outlet property="findButton" destination="WXP-SX-Zcc" id="h8K-pV-rZB"/>
+                        <outlet property="monthTextField" destination="Qqh-z0-pQF" id="0mK-Js-ljX"/>
+                        <outlet property="resultLabel" destination="hFL-IN-qnW" id="Llk-c6-65O"/>
+                        <outlet property="yearTextField" destination="g8u-PR-AEe" id="Z8H-6b-Flp"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
@@ -250,6 +367,7 @@
                 <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="gqV-Ej-MEh" sceneMemberID="viewController">
                     <toolbarItems/>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="IRE-nR-7yD">
+                        <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" systemColor="secondaryLabelColor"/>
                         <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -333,7 +451,7 @@
     </scenes>
     <inferredMetricsTieBreakers>
         <segue reference="Lgm-FN-G1M"/>
-        <segue reference="3vS-Sg-huv"/>
+        <segue reference="0Rk-AH-vrD"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="calendar.circle.fill" catalog="system" width="128" height="121"/>
